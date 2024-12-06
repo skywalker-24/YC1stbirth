@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아이 돌잔치 축하 페이지</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+    }
+    h1 {
+      color: #2a9d8f;
+    }
+    .video {
+      margin-top: 20px;
+    }
+    .message {
+      margin-top: 40px;
+    }
+    .message input {
+      padding: 10px;
+      width: 80%;
+      font-size: 16px;
+    }
+    .message button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #264653;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>아이 돌잔치에 오신 것을 환영합니다!</h1>
+
+  <div class="video">
+    <h2>축하 영상</h2>
+    <video controls width="80%">
+      <source src="아이_영상_URL.mp4" type="video/mp4">
+      이 브라우저는 비디오 태그를 지원하지 않습니다.
+    </video>
+  </div>
+
+  <div class="message">
+    <h2>아이에게 축하 메시지 남기기</h2>
+    <textarea id="messageText" rows="4" cols="50" placeholder="여기에 축하 메시지를 입력해주세요."></textarea><br><br>
+    <button onclick="submitMessage()">메시지 전송</button>
+  </div>
+
+  <script>
+    function submitMessage() {
+      var message = document.getElementById("messageText").value;
+      if (message) {
+        alert("축하 메시지가 전송되었습니다!");
+      } else {
+        alert("메시지를 입력해주세요.");
+      }
+    }
+  </script>
+
+</body>
+</html>
